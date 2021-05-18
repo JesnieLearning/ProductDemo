@@ -21,7 +21,16 @@ data-backdrop="static" data-keyboard="false">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+		<div class="modal-body">
+            <div *ngIf="isView; else elseBlock ">
+                <app-view-delete-product [prod]="prod"  ></app-view-delete-product>
+            </div>
+       
+            <ng-template #elseBlock>
+                <app-add-edit-product [prod]="prod" *ngIf="isAllowAddEditProd" ></app-add-edit-product>
+            </ng-template>
+          
+        </div>
             <div *ngIf="isView">
                 <app-view-delete-product [prod]="prod"  ></app-view-delete-product>
             </div>
