@@ -1,0 +1,3 @@
+[submodule "ProductDemoUI"]
+	path = ProductDemoUI
+	url = https://github.com/JesnieLearning/ProductDemo
